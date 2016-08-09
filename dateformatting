@@ -1,0 +1,7 @@
+#!/bin/bash
+zaman=`date +"%d-%m-%Y\ (%H:%M)"`
+
+echo $zaman
+
+
+mkdir $zaman

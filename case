@@ -1,0 +1,9 @@
+#!/bin/bash
+
+case $# in 
+1) echo "girilen değerler: $1";;
+2) echo "girilen değerler: $1 $2";;
+3) echo "girilen değerler: $1 $2 $3";;
+*) echo "0 ya da 3 ten fazla değer girildi";;
+esac
+ 

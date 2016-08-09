@@ -1,0 +1,38 @@
+#!/bin/bash
+
+###########################################
+# 					  #
+# This script downloads 128x128 PNG icon  #
+# photos of the word you passed as        #
+# parameter from iconarchive.com	  #
+# 					  #
+# This is written by Özcan YARIMDÜNYA  	  #
+#		  			  #      
+# 			 @ozcaan11 - 2016 #
+###########################################
+
+if [ -z $1 ];then
+echo "specify a name (Ex. home,bird,car..)"
+exit
+fi
+
+icon=$1
+icon_url=search?q=$icon
+
+wget http://www.iconarchive.com/$icon_url
+
+cat $icon_url | grep '<img src="http://icons.iconarchive.com/icons/' | cut -d '"' -f 20 >> .links
+
+time=`date +"%X"`
+dirName=[$icon]\-$time
+mkdir $dirName
+
+wget -i .links -P $dirName 
+
+rm $icon_url .links
+
+echo ""
+echo "********** ITS DONE! **********"
+echo ""
+
+# This script written by @ozcaan11

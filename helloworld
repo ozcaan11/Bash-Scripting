@@ -1,0 +1,11 @@
+#!/bin/bash
+
+todaysdate=`/bin/date`
+echo ""
+echo "#############################################"
+echo ""
+echo "Hello world i am starting to bash programming"
+echo "Today is : $todaysdate"
+echo ""
+echo "#############################################"
+echo ""

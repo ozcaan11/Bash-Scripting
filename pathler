@@ -1,0 +1,6 @@
+#!/bin/bash
+degisken=`$PATH`
+for var in $degisken
+do
+echo $var
+done
